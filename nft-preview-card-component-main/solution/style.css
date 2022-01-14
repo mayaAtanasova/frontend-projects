@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+}
+
+.container {
+  background-color: hsl(217, 54%, 11%);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: minmax(375px, 1440px);
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding: 20px 0 0px 0;
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  padding: 10px 0 10px 0;
+  line-height: 1.75rem;
+}
+
+a {
+  text-decoration: none;
+  position:relative;
+}
+
+.card {
+  width: 450px;
+  height: 700px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 40px;
+  border: 20px solid hsl(220, 54%, 11%);
+  padding: 30px;
+}
+
+.image-container {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container:hover .overlay {
+  opacity: 0.5;
+}
+
+.image-container:hover .svg {
+  opacity: 1;
+} 
+
+
+.image {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+
+.overlay {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease-in;
+  background-color: hsl(178, 100%, 50%);
+}
+
+.svg {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: .5s ease-in;
+}
+
+
+.subs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0 0 0;
+}
+
+.eth p {
+  position: relative;
+  padding: 0 0 0 20px;
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+}
+
+.eth p::before {
+  position: absolute;
+  content: "";
+  background-image: url("./images/icon-ethereum.svg");
+  background-size: 12px 20px;
+  height: 20px;
+  width: 12px;
+  left: 0px;
+  top: 25%;
+}
+
+.time p {
+  position: relative;
+  padding: 0;
+}
+
+.time p::before {
+  position: absolute;
+  content: "";
+  background-image: url("./images/icon-clock.svg");
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  left: -35%;
+  top: 25%;
+}
+
+.line {
+  height: 0.5px;
+  background-color: hsl(215, 51%, 70%);
+  margin: 15px 0 15px 0;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+footer p {
+  padding: 0 0 0 20px;
+}
+
+span {
+  color:hsl(0, 0%, 100%);
+}
+
+h1:hover, span:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid hsl(0, 0%, 100%);
+  width: 40px;
+  height: 40px;
+}
+
+.avatar img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 375px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 350px;
+    height: 575px;
+  }
+
+}
