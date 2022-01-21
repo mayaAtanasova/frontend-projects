@@ -1,0 +1,26 @@
+GET HTTP://localhost:3001/subscribers
+
+###
+
+GET http://localhost:3001/subscribers/61e989cb8838fbf5accbb1ec
+
+###
+POST  http://localhost:3001/subscribers
+Content-Type: application/json
+
+{
+    "name": "test person",
+    "subscribedToChannel": "Test Channel"
+}
+
+###
+DELETE http://localhost:3001/subscribers/61e989cb8838fbf5accbb1ec
+
+###
+PATCH http://localhost:3001/subscribers/61e98f28274f3a8dfd78f63b
+Content-Type: application/json
+
+{
+    "name": "Boyan" 
+}
+
